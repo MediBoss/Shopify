@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B87856CC224BEC5900E3148F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87856CB224BEC5900E3148F /* AppDelegate.swift */; };
-		B87856CE224BEC5900E3148F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87856CD224BEC5900E3148F /* ViewController.swift */; };
 		B87856D1224BEC5900E3148F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87856CF224BEC5900E3148F /* Main.storyboard */; };
 		B87856D3224BEC5B00E3148F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87856D2224BEC5B00E3148F /* Assets.xcassets */; };
 		B87856D6224BEC5B00E3148F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87856D4224BEC5B00E3148F /* LaunchScreen.storyboard */; };
 		B87856E1224BEC5B00E3148F /* ShopifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87856E0224BEC5B00E3148F /* ShopifyTests.swift */; };
 		B87856EC224BEC5B00E3148F /* ShopifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87856EB224BEC5B00E3148F /* ShopifyUITests.swift */; };
+		B8785701224BF12800E3148F /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8785700224BF12800E3148F /* Collection.swift */; };
+		B8785703224BFE3200E3148F /* CollectionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8785702224BFE3200E3148F /* CollectionServices.swift */; };
+		B8785705224C544C00E3148F /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8785704224C544C00E3148F /* HomePageViewController.swift */; };
+		B8785707224C5D8700E3148F /* Collect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8785706224C5D8700E3148F /* Collect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		B87856C8224BEC5900E3148F /* Shopify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shopify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87856CB224BEC5900E3148F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B87856CD224BEC5900E3148F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B87856D0224BEC5900E3148F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B87856D2224BEC5B00E3148F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B87856D5224BEC5B00E3148F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		B87856E7224BEC5B00E3148F /* ShopifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87856EB224BEC5B00E3148F /* ShopifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopifyUITests.swift; sourceTree = "<group>"; };
 		B87856ED224BEC5B00E3148F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8785700224BF12800E3148F /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		B8785702224BFE3200E3148F /* CollectionServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionServices.swift; sourceTree = "<group>"; };
+		B8785704224C544C00E3148F /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		B8785706224C5D8700E3148F /* Collect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,11 @@
 		B87856CA224BEC5900E3148F /* Shopify */ = {
 			isa = PBXGroup;
 			children = (
-				B87856CB224BEC5900E3148F /* AppDelegate.swift */,
-				B87856CD224BEC5900E3148F /* ViewController.swift */,
+				B87856FD224BEDB800E3148F /* Supporting Files */,
+				B87856FC224BEDAC00E3148F /* Networking */,
+				B87856FB224BEDA600E3148F /* Views */,
+				B87856FA224BEDA000E3148F /* Models */,
+				B87856F9224BED9900E3148F /* Controlles */,
 				B87856CF224BEC5900E3148F /* Main.storyboard */,
 				B87856D2224BEC5B00E3148F /* Assets.xcassets */,
 				B87856D4224BEC5B00E3148F /* LaunchScreen.storyboard */,
@@ -123,6 +132,62 @@
 				B87856ED224BEC5B00E3148F /* Info.plist */,
 			);
 			path = ShopifyUITests;
+			sourceTree = "<group>";
+		};
+		B87856F9224BED9900E3148F /* Controlles */ = {
+			isa = PBXGroup;
+			children = (
+				B8785704224C544C00E3148F /* HomePageViewController.swift */,
+			);
+			path = Controlles;
+			sourceTree = "<group>";
+		};
+		B87856FA224BEDA000E3148F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8785700224BF12800E3148F /* Collection.swift */,
+				B8785706224C5D8700E3148F /* Collect.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B87856FB224BEDA600E3148F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B87856FC224BEDAC00E3148F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B87856FF224BF01C00E3148F /* HTTP */,
+				B87856FE224BF01100E3148F /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B87856FD224BEDB800E3148F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B87856CB224BEC5900E3148F /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B87856FE224BF01100E3148F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B8785702224BFE3200E3148F /* CollectionServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B87856FF224BF01C00E3148F /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +321,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B87856CE224BEC5900E3148F /* ViewController.swift in Sources */,
+				B8785705224C544C00E3148F /* HomePageViewController.swift in Sources */,
+				B8785707224C5D8700E3148F /* Collect.swift in Sources */,
+				B8785701224BF12800E3148F /* Collection.swift in Sources */,
 				B87856CC224BEC5900E3148F /* AppDelegate.swift in Sources */,
+				B8785703224BFE3200E3148F /* CollectionServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
