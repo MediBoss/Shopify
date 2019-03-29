@@ -12,4 +12,17 @@ class CustomCollectionsTableCellTableViewCell: UITableViewCell {
 
     static let cellID = "custom_collections"
     @IBOutlet weak var collectionNameLabel: UILabel!
+    
+    func configureCellElement(colletion: Collection){
+    
+        collectionNameLabel.text = colletion.title
+        collectionNameLabel.font = UIFont(name: "PingFangTC-Medium", size: 18)
+        collectionNameLabel.textAlignment = .center
+        collectionNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            collectionNameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            collectionNameLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
+    }
 }
