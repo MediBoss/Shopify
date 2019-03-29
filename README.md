@@ -1,7 +1,7 @@
 # Shopify
 
-<img src= "Screenshots/home.png" width = 300 height = 500></img>
-<img src= "Screenshots/detail.png" width = 300 height = 500></img>
+<img src= "Screenshots/home.png" width = 250 height = 450></img>
+<img src= "Screenshots/detail.png" width = 250 height = 450></img>
 
 ### Overview 
 
