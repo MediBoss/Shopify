@@ -144,9 +144,7 @@ struct CollectionServices {
                         completion(Result.failure(HTTPNetworkError.decodingFailed))
                     }
                 }
-            }
-            
-        
+            } 
         }.resume()
     }
 }
