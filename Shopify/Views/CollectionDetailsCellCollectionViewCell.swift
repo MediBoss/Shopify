@@ -12,10 +12,6 @@ import UIKit
 class CollectionDetailsCellCollectionViewCell: UICollectionViewCell {
     
     static let cellID = "collection_details"
-    
-    //var labelStackView = UIStackView()
-    //var outerStackView = UIStackView()
-    
     var productNameLabel: UILabel = {
         
         let label = UILabel()
@@ -121,6 +117,5 @@ class CollectionDetailsCellCollectionViewCell: UICollectionViewCell {
             totalInventoryLabel.widthAnchor.constraint(equalTo: labelStackView.widthAnchor, multiplier: 1),
             totalInventoryLabel.heightAnchor.constraint(equalTo: labelStackView.heightAnchor, multiplier: 0.3)
             ])
-    }
-    
+    }   
 }
