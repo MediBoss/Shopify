@@ -15,7 +15,6 @@ import Foundation
     - id: the unique id of a product
     - title: the title of a product
     - variants : the list of variants that a product contains
- 
  **/
 
 
