@@ -32,24 +32,21 @@ extension CustomCollectionsViewController: UITableViewDataSource, UITableViewDel
         return 80.0
     }
     
-    /// Show all product details
+    /// Goes to page that displays all the products
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let destinationVC = CollectionDetailsViewController()
         let selectedCollection = customCollections[indexPath.row]
         
         CollectionServices.shared.fetchAllCollects(collectionID: selectedCollection.id!) { (result) in
-
+                                                                                          
             switch result{
-
             case let .success(fetchedCollects):
-
                 destinationVC.collection = selectedCollection
                 destinationVC.collects = fetchedCollects
                 DispatchQueue.main.async {
                     self.navigationController?.pushViewController(destinationVC, animated: true)
                 }
-
             case let .failure(error):
                 print(error)
             }
