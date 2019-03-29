@@ -19,9 +19,12 @@ extension CollectionDetailsViewController: UICollectionViewDataSource, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionDetailsCellCollectionViewCell.cellID, for: indexPath) as! CollectionDetailsCellCollectionViewCell
-        let currentProduct = products[indexPath.row]
         
-        cell.configureCellElements(product: currentProduct , collection: collection!, inventoryAmount: currentProduct.variants?.count ?? 0)
+        let currentProduct = products[indexPath.row]
+        let currentVarient = currentProduct.variants
+        
+        totalVariants = (currentVarient?.map({ $0.inventory_quantity! }).reduce(0, +))!
+        cell.configureCellElements(product: currentProduct , collection: collection!, totalInventory: totalVariants)
         
         return cell
     }
@@ -33,7 +36,7 @@ extension CollectionDetailsViewController: UICollectionViewDelegateFlowLayout{
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = collectionView.bounds.width
-        return CGSize(width: screenWidth/1.2, height: screenWidth/2.5)
+        return CGSize(width: screenWidth/1.2, height: screenWidth/2)
     }
     
     

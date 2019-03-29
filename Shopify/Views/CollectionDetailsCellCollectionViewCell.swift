@@ -62,7 +62,8 @@ class CollectionDetailsCellCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureCellElements(product: Product, collection: Collection, inventoryAmount: Int) {
+    /// Sets ups all the UI elements on the cell and downloads collection's images
+    func configureCellElements(product: Product, collection: Collection, totalInventory: Int) {
         
         let url = URL(string: (collection.image?.src)!)
 
@@ -70,16 +71,14 @@ class CollectionDetailsCellCollectionViewCell: UICollectionViewCell {
             switch result {
             case .success(let value):
                 self.collectionImageView.image = value.image
-                //self.backgroundView = UIImageView(image: value.image)
             case .failure(let error):
                 print("Error: \(error)")
             }
         }
         
-        //collectionImageView = UIImageView(image: UIImage(named: "headshot"))
         productNameLabel.text = product.title
         collectionTitleLabel.text = collection.title
-        totalInventoryLabel.text = "x\(inventoryAmount) available"
+        totalInventoryLabel.text = "x\(totalInventory) available"
         
         self.layer.cornerRadius = 15
         self.clipsToBounds = true
@@ -87,12 +86,10 @@ class CollectionDetailsCellCollectionViewCell: UICollectionViewCell {
         self.layer.shadowRadius = 1
     }
     
+    /// Applies Auto Layout to the cell's UI components
     private func cellAutoLayout(){
         
-        //outerStackView = UIStackView(arrangedSubviews: [labelStackView, collectionImageView])
-        
         let labelStackView = UIStackView(arrangedSubviews: [productNameLabel, collectionTitleLabel, totalInventoryLabel])
-        
         let mainStackView = UIStackView(arrangedSubviews: [labelStackView, collectionImageView])
         
         labelStackView.alignment = .center

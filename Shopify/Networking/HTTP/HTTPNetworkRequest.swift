@@ -13,7 +13,15 @@ public typealias HTTPHeaders = [String: Any]?
 
 struct HTTPNetworkRequest {
     
-    /// Set the body, method, headers, and paramaters of the request
+    /**
+     Sets up the request to be made to the shopify API
+     
+     - Parameters:
+        - route : the endpoint where the data will be requested from
+        - parameters: the parameters to be sent along on the request
+     
+     - Returns: a fully configured URLRequest object
+     **/
     static func configureHTTPRequest(from route: HTTPNetworkRoute, with parameters: HTTPParameters) throws -> URLRequest {
         
         guard let url = URL(string: route.rawValue) else { fatalError("Error while unwrapping url")}
@@ -25,7 +33,17 @@ struct HTTPNetworkRequest {
         return request
     }
     
-    /// Configure the request parameters and headers before the API Call
+    
+    /**
+     Sets up the parameters from the client before making the request
+     
+     - Parameters:
+        - parameters : the parameters to be sent along on the request
+        - request: the request object to configure the parameter with
+     
+     - Throws:
+        - `HTTPNetworkError.encodingFailed`: If the parameter could not be encoded
+     **/
     static func configureParameters(parameters: HTTPParameters?, request: inout URLRequest) throws {
 
         do {
@@ -37,6 +55,17 @@ struct HTTPNetworkRequest {
         }
     }
     
+    
+    /**
+     Encodes the client parameters and appends it the request object
+     
+     - Parameters:
+        - urlRequest : the same URLRequest object to be used wit URLDataTask Class
+        - parameters: the request object to configure the parameter with
+     
+     - Throws:
+        - `HTTPNetworkError.missingURL`: If URLRequest object failed to provide an URL
+     **/
     static func encodeParameters(for urlRequest: inout URLRequest, with parameters: HTTPParameters) throws {
         if parameters == nil { return }
         guard let url = urlRequest.url, let unwrappedParameters = parameters else { throw HTTPNetworkError.missingURL }

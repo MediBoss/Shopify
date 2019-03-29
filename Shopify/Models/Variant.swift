@@ -8,9 +8,16 @@
 
 import Foundation
 
+/**
+ Defines the blueprint of each variant object
+ 
+ Properties:
+    - id: the unique id of a variant
+    - inventory_quantity: the amount of inventory that a variant obtains
+ **/
+
 struct Variant: Decodable{
     
     let id: Int?
-    let product_id: Int?
-    let title: String?
+    let inventory_quantity: Int?
 }

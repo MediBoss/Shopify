@@ -40,26 +40,18 @@ extension CustomCollectionsViewController: UITableViewDataSource, UITableViewDel
         
         CollectionServices.shared.fetchAllCollects(collectionID: selectedCollection.id!) { (result) in
 
-//            switch result{
-//
-//            case let .success(fetchedCollects):
-//
-////                destinationVC.collection = selectedCollection
-////                destinationVC.collects = fetchedCollects
-////                DispatchQueue.main.async {
-////                    self.navigationController?.pushViewController(destinationVC, animated: true)
-////                }
-//
-//            case let .failure(error):
-//                print(error)
-//            }
-        }
-        
-        CollectionServices.shared.fetchAllCollects(collectionID: selectedCollection.id!) { (fetchedCollects) in
-            destinationVC.collection = selectedCollection
-            destinationVC.collects = fetchedCollects
-            DispatchQueue.main.async {
-                self.navigationController?.pushViewController(destinationVC, animated: true)
+            switch result{
+
+            case let .success(fetchedCollects):
+
+                destinationVC.collection = selectedCollection
+                destinationVC.collects = fetchedCollects
+                DispatchQueue.main.async {
+                    self.navigationController?.pushViewController(destinationVC, animated: true)
+                }
+
+            case let .failure(error):
+                print(error)
             }
         }
     }

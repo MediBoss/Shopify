@@ -9,6 +9,15 @@
 import Foundation
 import UIKit
 
+/**
+ Defines the blueprint of each collection object
+ 
+ Properties:
+    - id: the unique id of a collection
+    - title: the title of the collection
+    - image : the image of the collection
+ 
+ **/
 struct Collection: Decodable{
     
     let id: Int?
@@ -19,11 +28,4 @@ struct Collection: Decodable{
 struct Collections: Decodable{
     
     let custom_collections: [Collection]?
-}
-
-struct Image: Decodable {
-    
-    let src: String?
-    let width: Int?
-    let height: Int?
 }

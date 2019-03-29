@@ -12,6 +12,7 @@ class CollectionDetailsViewController: UIViewController {
 
     var collection: Collection?
     var collects: [Collect]?
+    var totalVariants = 0
     var products = [Product](){
         didSet{
             DispatchQueue.main.async {
@@ -53,23 +54,16 @@ class CollectionDetailsViewController: UIViewController {
         
         guard let productIDs: [String] = collects?.map({ $0.product_id!.toString() }) else { return }
         
-//        CollectionServices.shared.fetchAllProduct(ids: productIDs) { (products) in
-//            self.products = products
-//        }
-        
-//        CollectionServices.shared.fetchAllProduct(ids: productIDs) { (result) in
-//
-//            switch result{
-//
-//            case let .success(fetchedProducts):
-//                self.products = fetchedProducts
-//
-//            case let .failure(error):
-//                print(error)
-//            }
-//        }
-        CollectionServices.shared.fetchAllProduct(ids: productIDs) { (fetchedProducts) in
-            self.products = fetchedProducts
+        CollectionServices.shared.fetchAllProduct(ids: productIDs) { (result) in
+
+            switch result{
+
+            case let .success(fetchedProducts):
+                self.products = fetchedProducts
+
+            case let .failure(error):
+                print(error)
+            }
         }
     }
     
@@ -79,12 +73,9 @@ class CollectionDetailsViewController: UIViewController {
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
         
         guard let name = collection?.title else { return }
-        // Styling the home page title
         titleLabel.text = "\(name)"
         titleLabel.textColor = .black
         titleLabel.font = UIFont(name: "PingFangTC-Medium", size: 20)
-        titleLabel.adjustsFontSizeToFitWidth = true
-        
         navigationItem.titleView = titleLabel
         navigationController?.navigationBar.backgroundColor = .white
         navigationController?.navigationBar.alpha = 1

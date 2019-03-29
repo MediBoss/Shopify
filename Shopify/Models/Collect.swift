@@ -8,6 +8,13 @@
 
 import Foundation
 
+/**
+ Defines the blueprint of each collect object
+ 
+ Properties:
+    - id: the unique id of a collect
+    - product_id: the unique id of a product
+ **/
 
 struct Collect: Decodable {
     

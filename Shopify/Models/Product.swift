@@ -8,11 +8,21 @@
 
 import Foundation
 
+/**
+ Defines the blueprint of each Product object
+ 
+ Properties:
+    - id: the unique id of a product
+    - title: the title of a product
+    - variants : the list of variants that a product contains
+ 
+ **/
+
+
 struct Product: Decodable{
     
     let id: Int?
     let title: String?
-    let vendor: String?
     let variants: [Variant]?
 }
 
