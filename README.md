@@ -23,30 +23,36 @@ Install all the Pods
 
 ### File/Folder Architecture
 
+I followed the MVC architecure for the Shopify challenge project. 
 ```
 root/
 |
 |
-|-- Controllers/                # routing and logic
-        |-- 
+|-- Shopify/                
+        |-- Models                   # Contains all the models.
+        |-- Views                    # Contains all UI cells. 
+        |-- Controllers              # handles the connection between the the view, model, and networking.
+        |-- Networking               # supports the networkinglayer.
+        |-- Supporting Files         # contains extra files. 
+        |-- Extensions               # conatains extension of current data types and classes.
+        |-- Info.plist               # extra information about the application
 |
-|-- Models/                     # database models
-      | -- 
+|-- Screenshots/                     # images 
+      | -- home.png
+      | -- detail.png
       
 |
-|-- views/                      # handlebars templates
+|-- ShopifyTests/                    # Unit test set up
       |--layouts/
       |
       |-- partials/
 |
-|-- Tests/                      # unit testing
+|-- ShopifyUITests/                  # UI Test set up
 |
-|
-|-- env files                   # environment variables
-|-- index.js                    # dev server
-|-- notes.md                    # unorganized notes; pre-Kanban board
-|-- README.md
+|                   
+|-- README.md                          
 |-- Podfile
+|-- Podfile.lock
 ```
 
 ### Built with
