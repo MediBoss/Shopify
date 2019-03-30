@@ -37,14 +37,14 @@ root/
         |-- Extensions               
         |-- Info.plist             
 |
-|-- Screenshots/                     # images 
+|-- Screenshots/                   
       | -- home.png
       | -- detail.png
       
 |
-|-- ShopifyTests/                    # Unit test set up
+|-- ShopifyTests/                   
 |
-|-- ShopifyUITests/                  # UI Test set up
+|-- ShopifyUITests/                 
 |
 |                   
 |-- README.md                          
