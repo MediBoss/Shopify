@@ -40,9 +40,6 @@ root/
       
 |
 |-- ShopifyTests/                    # Unit test set up
-      |--layouts/
-      |
-      |-- partials/
 |
 |-- ShopifyUITests/                  # UI Test set up
 |
