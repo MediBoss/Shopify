@@ -18,9 +18,6 @@ Install all the Pods
 
 `` pod install ``
 
-### Engineer
-* **Medi Assumani** - *iOS Engineer*
-
 ### File/Folder Architecture
 
 I followed the MVC architecure for the Shopify challenge project. 
@@ -54,6 +51,9 @@ root/
 |-- Podfile
 |-- Podfile.lock
 ```
+
+### Engineer
+* **Medi Assumani** - *iOS Engineer*
 
 ### Built with
 
