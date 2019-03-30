@@ -26,13 +26,16 @@ root/
 |
 |
 |-- Shopify/                
-        |-- Models                   # Contains all the models.
-        |-- Views                    # Contains all UI cells. 
-        |-- Controllers              # handles the connection between the the view, model, and networking.
-        |-- Networking               # supports the networkinglayer.
-        |-- Supporting Files         # contains extra files. 
-        |-- Extensions               # conatains extension of current data types and classes.
-        |-- Info.plist               # extra information about the application
+        |-- Models                  
+        |-- Views                    
+        |-- Controllers              
+        |-- Networking  
+                |-- HTTP
+                |-- Services
+          
+        |-- Supporting Files        
+        |-- Extensions               
+        |-- Info.plist             
 |
 |-- Screenshots/                     # images 
       | -- home.png
