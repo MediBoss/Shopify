@@ -23,6 +23,7 @@ Install all the Pods
 
 ### File/Folder Architecture
 
+``
 .
 ├── _config.yml
 ├── _drafts
@@ -41,6 +42,8 @@ Install all the Pods
 |   └── members.yml
 ├── _site
 └── index.html
+
+``
 
 ### Built with
 
