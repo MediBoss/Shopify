@@ -7,8 +7,8 @@ This repository contains the challenge code for the 2019 iOS Engineer Internship
 
 ### Screenshots
 
-<img src= "Screenshots/home.png" width = 250 height = 490></img>
-<img src= "Screenshots/detail.png" width = 250 height = 490></img>
+<img src= "Screenshots/home.png" width = 250 height = 500></img>
+<img src= "Screenshots/detail.png" width = 250 height = 500></img>
 
 ### Getting Started
 
@@ -57,6 +57,6 @@ root/
 
 ### Built with
 
-* Swift 4.2 - Core application
-* Xcode - main IDE
-* KingFisher - Image downloading and caching
+* Swift 4.2
+* Xcode
+* KingFisher
