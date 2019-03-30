@@ -12,10 +12,9 @@ This repository contains the challenge code for the 2019 iOS Engineer Internship
 
 ### Getting Started
 
+Run these commands to have the full project ready on your local machine.
+
 `` git clone https://github.com/MediBoss/Shopify.git``
-
-Install all the Pods
-
 `` pod install ``
 
 ### File/Folder Architecture
